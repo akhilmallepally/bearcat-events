@@ -4,4 +4,4 @@ A progressive web application application that display an event conducted by var
 We have used NextJs for frontend, Django for backend.
 ### RFP and Proposal documents
 
-RFP (https://github.com/pramod096/Bearcat-Events/blob/main/RFP.md) proposed by the client and the [proposal](https://github.com/kushalkatari/Proposal5B-BearcatE/blob/main/Proposal.md) by our development team to the client.
+[RFP](https://github.com/pramod096/Bearcat-Events/blob/main/RFP.md) proposed by the client and the [proposal](https://github.com/kushalkatari/Proposal5B-BearcatE/blob/main/Proposal.md) by our development team to the client.
