@@ -4,6 +4,9 @@ A progressive web application application that display an event conducted by var
 We have used NextJs for frontend, Django for backend.
 
 # References
+
+The below links are use as references in the process of developing the application
+
 https://docs.djangoproject.com/en/3.2/intro/tutorial01/   
 https://nextjs.org/learn/basics/create-nextjs-app   
 https://www.digitalocean.com/community/tutorials/build-a-to-do-application-using-django-and-react   
