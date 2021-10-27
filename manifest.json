@@ -1,6 +1,6 @@
 {
-    "name":"Fact PWA",
-    "short_name":"Facts",
+    "name":"Bearcat Events",
+    "short_name":"Events",
     "scope": "/",
     "start_url":"/",
     "display":"standalone",
