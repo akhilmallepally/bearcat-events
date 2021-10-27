@@ -5,8 +5,10 @@ const Index = () => {
   return (
     <div>
       <Header />
-      <p className="text-3xl">Index page</p>
       <PostCard />
+    <div>
+      <Footer />
+      </div>
     </div>
   )
 }
