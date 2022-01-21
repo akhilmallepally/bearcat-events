@@ -1,7 +1,32 @@
 # Bearcat Events
 A progressive web application application that display an event conducted by various student organizations in Northwest Missouri State University, randomly every day. The app would let the users to add, update and Delete Events. There are various student organizations in Northwest. Each student organization conducts various events during every semester.
-# Stack
-We have used NextJs for frontend, Django for backend.
+
+### RFP of ths project
+Link to the RFP proposed by the client can be found [here](https://github.com/pramod096/Bearcat-Events/blob/main/RFP.md).
+
+### Proposal
+Progressive web application development [proposal](https://github.com/kushalkatari/Proposal5B-BearcatE/blob/main/Proposal.md)   
+
+### Hosted site
+Click [here](https://bearcatevents.herokuapp.com/) to find out deployed site
+
+### Proposed stack for the project:   
+* Programming Languages :   
+  1. Python
+  1. JavaScript
+* Libraries & Frameworks   
+  1. Frontend
+      * CSS
+      * BootStrap( For responsive design)
+      * Next.js
+  2. Backend
+      * Django
+  3. Hosting platform
+      * Heroku
+  4. Data Host & Type
+      * Heroku PostgreSQL
+  5. Front-end page plan :
+      * Server-side views
 
 # References
 
