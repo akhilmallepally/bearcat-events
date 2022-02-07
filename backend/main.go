@@ -14,17 +14,25 @@ type event struct {
 }
 
 var events = []event{
-	{ID: 1, Name: "Shutter Island", Organization: "Martin Scorsese", Date: "2010"},
-	{ID: 2, Name: "Shutter Island", Organization: "Martin Scorsese", Date: "2010"},
-	{ID: 3, Name: "Shutter Island", Organization: "Martin Scorsese", Date: "2010"},
+	{ID: 1, Name: "Career Day", Organization: "ISA", Date: "2022"},
+	{ID: 2, Name: "2 Day workshop", Organization: "ACM", Date: "2022"},
+	{ID: 3, Name: "Big Data Session", Organization: "IEEE", Date: "2022"},
 }
 
 func getEvents(c *gin.Context) {
 	c.IndentedJSON(http.StatusOK, events)
 }
 
+func createNewEvent(c *gin.Context) {
+	var newEvent event
+	if err := c.BindJSON(&newEvent); err != nil {
+		return
+	}
+	events = append(events, newEvent)
+	c.IndentedJSON(http.StatusCreated, newEvent)
+}
 func main() {
 	router := gin.Default()
-	router.GET("/movies", getEvents)
+	router.GET("/events", getEvents)
 	router.Run("localhost:8080")
 }
