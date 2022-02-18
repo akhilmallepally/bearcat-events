@@ -1,62 +1,162 @@
 package main
 
 import (
+	"database/sql"
+	"log"
 	"net/http"
+	"text/template"
 
-	"errors"
-
-	"github.com/gin-gonic/gin"
+	_ "github.com/go-sql-driver/mysql"
 )
 
-type event struct {
-	ID           string `json:"id"`
-	Name         string `json:"name"`
-	Organization string `json:"organization"`
-	Date         string `json:"date"`
+type Event struct {
+	Id       int
+	Name     string
+	Location string
 }
 
-var events = []event{
-	{ID: "1", Name: "Career Day", Organization: "ISA", Date: "2022"},
-	{ID: "2", Name: "2 Day workshop", Organization: "ACM", Date: "2022"},
-	{ID: "3", Name: "Big Data Session", Organization: "IEEE", Date: "2022"},
-}
-
-func getEvents(c *gin.Context) {
-	c.IndentedJSON(http.StatusOK, events)
-}
-
-func eventById(c *gin.Context) {
-	id := c.Param("id")
-	event, err := getEventById(id)
+func dbConn() (db *sql.DB) {
+	dbDriver := "mysql"
+	dbUser := "root"
+	dbPass := "root"
+	dbName := "goblog"
+	db, err := sql.Open(dbDriver, dbUser+":"+dbPass+"@/"+dbName)
 	if err != nil {
-		c.IndentedJSON(http.StatusNotFound, gin.H{"message": "Event not found"})
-		return
+		panic(err.Error())
 	}
-	c.IndentedJSON(http.StatusOK, event)
-
+	return db
 }
 
-func getEventById(id string) (*event, error) {
-	for index, event := range events {
-		if event.ID == id {
-			return &events[index], nil
+var tmpl = template.Must(template.ParseGlob("form/*"))
+
+func Index(w http.ResponseWriter, r *http.Request) {
+	db := dbConn()
+	selDB, err := db.Query("SELECT * FROM Event ORDER BY id DESC")
+	if err != nil {
+		panic(err.Error())
+	}
+	emp := Event{}
+	res := []Event{}
+	for selDB.Next() {
+		var id int
+		var name, location string
+		err = selDB.Scan(&id, &name, &location)
+		if err != nil {
+			panic(err.Error())
 		}
+		emp.Id = id
+		emp.Name = name
+		emp.Location = location
+		res = append(res, emp)
+	}
+	tmpl.ExecuteTemplate(w, "Index", res)
+	defer db.Close()
+}
 
+func Show(w http.ResponseWriter, r *http.Request) {
+	db := dbConn()
+	nId := r.URL.Query().Get("id")
+	selDB, err := db.Query("SELECT * FROM Event WHERE id=?", nId)
+	if err != nil {
+		panic(err.Error())
 	}
-	return nil, errors.New("event not found")
-}
-func createNewEvent(c *gin.Context) {
-	var newEvent event
-	if err := c.BindJSON(&newEvent); err != nil {
-		return
+	emp := Event{}
+	for selDB.Next() {
+		var id int
+		var name, location string
+		err = selDB.Scan(&id, &name, &location)
+		if err != nil {
+			panic(err.Error())
+		}
+		emp.Id = id
+		emp.Name = name
+		emp.Location = location
 	}
-	events = append(events, newEvent)
-	c.IndentedJSON(http.StatusCreated, newEvent)
+	tmpl.ExecuteTemplate(w, "Show", emp)
+	defer db.Close()
 }
+
+func New(w http.ResponseWriter, r *http.Request) {
+	tmpl.ExecuteTemplate(w, "New", nil)
+}
+
+func Edit(w http.ResponseWriter, r *http.Request) {
+	db := dbConn()
+	nId := r.URL.Query().Get("id")
+	selDB, err := db.Query("SELECT * FROM Event WHERE id=?", nId)
+	if err != nil {
+		panic(err.Error())
+	}
+	emp := Event{}
+	for selDB.Next() {
+		var id int
+		var name, location string
+		err = selDB.Scan(&id, &name, &location)
+		if err != nil {
+			panic(err.Error())
+		}
+		emp.Id = id
+		emp.Name = name
+		emp.Location = location
+	}
+	tmpl.ExecuteTemplate(w, "Edit", emp)
+	defer db.Close()
+}
+
+func Insert(w http.ResponseWriter, r *http.Request) {
+	db := dbConn()
+	if r.Method == "POST" {
+		name := r.FormValue("name")
+		location := r.FormValue("location")
+		insForm, err := db.Prepare("INSERT INTO Event(name, location) VALUES(?,?)")
+		if err != nil {
+			panic(err.Error())
+		}
+		insForm.Exec(name, location)
+		log.Println("INSERT: Name: " + name + " | Location: " + location)
+	}
+	defer db.Close()
+	http.Redirect(w, r, "/", 301)
+}
+
+func Update(w http.ResponseWriter, r *http.Request) {
+	db := dbConn()
+	if r.Method == "POST" {
+		name := r.FormValue("name")
+		location := r.FormValue("location")
+		id := r.FormValue("uid")
+		insForm, err := db.Prepare("UPDATE Event SET name=?, location=? WHERE id=?")
+		if err != nil {
+			panic(err.Error())
+		}
+		insForm.Exec(name, location, id)
+		log.Println("UPDATE: Name: " + name + " | Location: " + location)
+	}
+	defer db.Close()
+	http.Redirect(w, r, "/", 301)
+}
+
+func Delete(w http.ResponseWriter, r *http.Request) {
+	db := dbConn()
+	emp := r.URL.Query().Get("id")
+	delForm, err := db.Prepare("DELETE FROM Event WHERE id=?")
+	if err != nil {
+		panic(err.Error())
+	}
+	delForm.Exec(emp)
+	log.Println("DELETE")
+	defer db.Close()
+	http.Redirect(w, r, "/", 301)
+}
+
 func main() {
-	router := gin.Default()
-	router.GET("/events", getEvents)
-	router.POST("/events/new", createNewEvent)
-	router.GET("/events/:id", eventById)
-	router.Run("localhost:8080")
+	log.Println("Server started on: http://localhost:8080")
+	http.HandleFunc("/", Index)
+	http.HandleFunc("/show", Show)
+	http.HandleFunc("/new", New)
+	http.HandleFunc("/edit", Edit)
+	http.HandleFunc("/insert", Insert)
+	http.HandleFunc("/update", Update)
+	http.HandleFunc("/delete", Delete)
+	http.ListenAndServe(":8080", nil)
 }
