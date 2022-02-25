@@ -2,11 +2,12 @@ package main
 
 import (
 	"database/sql"
+	"fmt"
 	"log"
 	"net/http"
 	"text/template"
 
-	_ "github.com/go-sql-driver/mysql"
+	_ "github.com/lib/pq"
 )
 
 type Event struct {
@@ -15,16 +16,24 @@ type Event struct {
 	Location string
 }
 
+const (
+	host     = "localhost"
+	port     = 5432
+	user     = "postgres"
+	password = "root"
+	dbname   = "goblog"
+)
+
 func dbConn() (db *sql.DB) {
-	dbDriver := "mysql"
-	dbUser := "root"
-	dbPass := "root"
-	dbName := "goblog"
-	db, err := sql.Open(dbDriver, dbUser+":"+dbPass+"@/"+dbName)
+	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+
+		"password=%s dbname=%s sslmode=disable",
+		host, port, user, password, dbname)
+	db, err := sql.Open("postgres", psqlInfo)
 	if err != nil {
-		panic(err.Error())
+		panic(err)
 	}
-	return db
+	defer db.Close()
+
 }
 
 var tmpl = template.Must(template.ParseGlob("form/*"))
