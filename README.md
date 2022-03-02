@@ -1,4 +1,4 @@
-[![CodeQL](https://github.com/akhilmallepally/bearcat-events/actions/workflows/codeql-analysis.yml/badge.svg?branch=main)](https://github.com/akhilmallepally/bearcat-events/actions/workflows/codeql-analysis.yml)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/588bf963333c4e9d8aacd02f53c3744b)](https://www.codacy.com/gh/akhilmallepally/bearcat-events/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=akhilmallepally/bearcat-events&amp;utm_campaign=Badge_Grade)   [![CodeQL](https://github.com/akhilmallepally/bearcat-events/actions/workflows/codeql-analysis.yml/badge.svg?branch=main)](https://github.com/akhilmallepally/bearcat-events/actions/workflows/codeql-analysis.yml)
 
 # Bearcat Events
 A progressive web application application that display an event conducted by various student organizations in Northwest Missouri State University, randomly every day. The app would let the users to add, update and Delete Events. There are various student organizations in Northwest. Each student organization conducts various events during every semester.
