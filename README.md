@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e7cc3f7bf29946f584472a9d16e0cb41)](https://app.codacy.com/gh/akhilmallepally/bearcat-events?utm_source=github.com&utm_medium=referral&utm_content=akhilmallepally/bearcat-events&utm_campaign=Badge_Grade_Settings)
 [![CodeQL](https://github.com/akhilmallepally/bearcat-events/actions/workflows/codeql-analysis.yml/badge.svg?branch=main)](https://github.com/akhilmallepally/bearcat-events/actions/workflows/codeql-analysis.yml)
 
 # Bearcat Events
