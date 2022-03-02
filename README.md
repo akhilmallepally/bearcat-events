@@ -1,3 +1,5 @@
+[![CodeQL](https://github.com/akhilmallepally/bearcat-events/actions/workflows/codeql-analysis.yml/badge.svg?branch=main)](https://github.com/akhilmallepally/bearcat-events/actions/workflows/codeql-analysis.yml)
+
 # Bearcat Events
 A progressive web application application that display an event conducted by various student organizations in Northwest Missouri State University, randomly every day. The app would let the users to add, update and Delete Events. There are various student organizations in Northwest. Each student organization conducts various events during every semester.
 
