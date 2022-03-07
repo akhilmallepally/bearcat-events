@@ -30,6 +30,9 @@ Click [here](https://bearcatevents.herokuapp.com/) to find out deployed site
   5. Front-end page plan :
       * Server-side views
 
+# DockerHub link:   
+https://hub.docker.com/repository/docker/akhilmallepally/bearcatevents-backend   
+
 # References
 
 The below links are use as references in the process of developing the application
