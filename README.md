@@ -30,7 +30,10 @@ Click [here](https://bearcatevents.herokuapp.com/) to find out deployed site
   5. Front-end page plan :
       * Server-side views
 
-# DockerHub link:   
+# Docker image link:   
+Containerized the backend Django Application. Built and shipped the docker image onto Docker Hub with the build tag.   
+**Build tag:**    ```docker pull akhilmallepally/bearcatevents-backend:latest```   
+
 https://hub.docker.com/repository/docker/akhilmallepally/bearcatevents-backend   
 
 # References
