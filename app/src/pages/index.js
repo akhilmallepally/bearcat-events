@@ -1,12 +1,21 @@
 import Header from "../components/Header"
 import PostCard from "../components/Card"
+import Footer from "../components/Footer"
+import Head from "next/head"
 
 const Index = () => {
   return (
     <div>
+    <Head>
+        <title>
+          5B - Bearcat events
+        </title>
+        </Head>
       <Header />
-      <p className="text-3xl">Index page</p>
       <PostCard />
+    <div>
+      <Footer />
+      </div>
     </div>
   )
 }
