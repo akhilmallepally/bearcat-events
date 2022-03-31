@@ -12,11 +12,11 @@ const Header = () => {
             </button>
             <div className="collapse navbar-collapse" id="navbarCollapse">
                 <div className="navbar-nav">
-                    <a href="https://bearcatevents.herokuapp.com/" className="nav-item nav-link active">Home</a>
-                    <a href="https://bearcatevents.herokuapp.com/list" className="nav-item nav-link active">Events</a>
+                    <a href="https://bearcat-events.herokuapp.com/" className="nav-item nav-link active">Home</a>
+                    <a href="https://bearcat-events.herokuapp.com/events" className="nav-item nav-link active">Events</a>
                 </div>
                 <div className="navbar-nav ms-auto">
-                    <a href="https://hellobeareve.herokuapp.com/admin/login/" className="nav-item nav-link">Login</a>
+                    <a href="https://hellobeareve.herokuapp.com/" className="nav-item nav-link">Login</a>
                 </div>
             </div>
         </div>
