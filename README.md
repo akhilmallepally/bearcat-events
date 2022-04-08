@@ -4,9 +4,9 @@
 A progressive web application application that display an event conducted by various student organizations in Northwest Missouri State University, randomly every day. The app would let the users to add, update and Delete Events. There are various student organizations in Northwest. Each student organization conducts various events during every semester.
 
 # Team Members
-|Akhil Mallepally   |S542403   |
-|   ---            |---       |
-| <b>Kushal Katari</b>     |  <b>S541904</b> |
+|Akhil Mallepally   |Front-End Developer|S542403@nwmissouri.edu   |
+|   ---            |---       |---           |
+| <b>Kushal Katari</b>     |<b>Back-End Developer</b>|  <b>S541904@nwmissouri.edu</b> |
 ### RFP of ths project
 Link to the RFP proposed by the client can be found [here](https://github.com/pramod096/Bearcat-Events/blob/main/RFP.md).
 
@@ -36,6 +36,9 @@ Click [here](https://bearcatevents.herokuapp.com/) to find out deployed site
 
 # Security Analysis
 Here is our [codacy](https://app.codacy.com/gh/akhilmallepally/bearcat-events/dashboard?utm_source=github.com&utm_medium=referral&utm_content=akhilmallepally/bearcat-events&utm_campaign=Badge_Grade) 
+
+# Documentation
+[Swagger](https://bearcateve.herokuapp.com/swagger/)
 
 # Docker image link:   
 Containerized the backend Django Application. Built and shipped the docker image onto Docker Hub with the build tag.   
