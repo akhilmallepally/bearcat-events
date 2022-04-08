@@ -41,6 +41,14 @@ Here is our [codacy](https://app.codacy.com/gh/akhilmallepally/bearcat-events/da
 [Swagger](https://bearcateve.herokuapp.com/swagger/)</br>
 [User Guide](https://akhilmallepally.github.io/bearcat-events-doc/)
 
+# Unit Testing   
+ Unit testing ensures that all code meets quality standards before it's deployed. This ensures a reliable engineering environment where quality is paramount.
+- Unit tests are present in `test/`
+- To run the unit test
+```bash
+python3 manage.py test
+```
+
 # Docker image link:   
 Containerized the backend Django Application. Built and shipped the docker image onto Docker Hub with the build tag.   
 **Build tag:**    ```docker pull akhilmallepally/bearcatevents-backend:latest```   
