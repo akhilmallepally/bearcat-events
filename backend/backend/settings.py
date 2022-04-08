@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'location_field.apps.DefaultConfig',
 	'corsheaders',
     'rest_framework',
-    'bearcatE',
+    'bearcatE', 
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -131,9 +132,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-
+CORS_ORIGIN_ALLOW_ALL = True
 # CORS_ORIGIN_WHITELIST = [
-#      'http://localhost:3000'
+#      'http://localhost:3000', 'https://hellobeareve.herokuapp.com'
 # ]
 
 # Heroku: Update database configuration from $DATABASE_URL.
@@ -159,14 +160,24 @@ SOCIAL_AUTH_AUTH0_SCOPE = [
     'email'
 ]
 
-AUTHENTICATION_BACKENDS = {
-    'auth0login.auth0backend.Auth0',
-    'django.contrib.auth.backends.ModelBackend'
-}
+# AUTHENTICATION_BACKENDS = {
+#     'auth0login.auth0backend.Auth0',
+#     'django.contrib.auth.backends.ModelBackend'
+# }
+
+AUTHENTICATION_BACKENDS = [
+    "auth0login.auth0backend.Auth0",
+    "django.contrib.auth.backends.ModelBackend",
+]
 
 LOGIN_URL = '/login/auth0'
 LOGIN_REDIRECT_URL = '/dashboard'
 
+# Base url to serve media files
+MEDIA_URL = '/media/'
+
+# Path where media is stored
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 
 # Activate Django-Heroku.

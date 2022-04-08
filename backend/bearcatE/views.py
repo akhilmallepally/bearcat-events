@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from rest_framework import viewsets
 from .models import EventModel
 from .serializers import bearcatESerializer
+from django.conf.urls import url
 
 # Create your views here.
 def home(request):
