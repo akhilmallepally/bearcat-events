@@ -34,6 +34,9 @@ Click [here](https://bearcatevents.herokuapp.com/) to find out deployed site
   5. Front-end page plan :
       * Server-side views
 
+# Security Analysis
+Here is our [codacy](https://app.codacy.com/gh/akhilmallepally/bearcat-events/dashboard?utm_source=github.com&utm_medium=referral&utm_content=akhilmallepally/bearcat-events&utm_campaign=Badge_Grade) 
+
 # Docker image link:   
 Containerized the backend Django Application. Built and shipped the docker image onto Docker Hub with the build tag.   
 **Build tag:**    ```docker pull akhilmallepally/bearcatevents-backend:latest```   
