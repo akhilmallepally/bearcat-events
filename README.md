@@ -61,3 +61,13 @@ The below links are use as references in the process of developing the applicati
 [2]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript
 [3]: https://uxplanet.org/how-the-bootstrap-4-grid-works-a1b04703a3b7
 [4]: https://mariestarck.com/deploy-your-next-js-app-to-heroku-in-5-minutes/
+
+# Links
+[Proposal](https://github.com/kushalkatari/Proposal5B-BearcatE/blob/main/Proposal.md)
+[Front-End Repo](https://github.com/akhilmallepally/bearcat-events/tree/main/app)
+[Back-End Repo](https://github.com/akhilmallepally/bearcat-events/tree/main/backend)
+[Wiki](https://github.com/akhilmallepally/bearcat-events/wiki)
+[Milestones](https://github.com/akhilmallepally/bearcat-events/milestones)
+[Issues](https://github.com/akhilmallepally/bearcat-events/issues)
+[Project Board](https://github.com/akhilmallepally/bearcat-events/projects/1)
+[Actions](https://github.com/akhilmallepally/bearcat-events/actions)
