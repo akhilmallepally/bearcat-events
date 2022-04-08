@@ -18,7 +18,7 @@ Click [here](https://bearcatevents.herokuapp.com/) to find out deployed site
 
 ### Proposed stack for the project:   
 * Programming Languages :   
-  1. Go
+  1. Python
   1. JavaScript
 * Libraries & Frameworks   
   1. Frontend
@@ -26,7 +26,7 @@ Click [here](https://bearcatevents.herokuapp.com/) to find out deployed site
       * BootStrap( For responsive design)
       * Next.js
   2. Backend
-      * Gin
+      * Django
   3. Hosting platform
       * Heroku
   4. Data Host & Type
