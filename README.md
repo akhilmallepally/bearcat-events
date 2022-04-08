@@ -63,11 +63,11 @@ The below links are use as references in the process of developing the applicati
 [4]: https://mariestarck.com/deploy-your-next-js-app-to-heroku-in-5-minutes/
 
 # Links
-[Proposal](https://github.com/kushalkatari/Proposal5B-BearcatE/blob/main/Proposal.md)
-[Front-End Repo](https://github.com/akhilmallepally/bearcat-events/tree/main/app)
-[Back-End Repo](https://github.com/akhilmallepally/bearcat-events/tree/main/backend)
-[Wiki](https://github.com/akhilmallepally/bearcat-events/wiki)
-[Milestones](https://github.com/akhilmallepally/bearcat-events/milestones)
-[Issues](https://github.com/akhilmallepally/bearcat-events/issues)
-[Project Board](https://github.com/akhilmallepally/bearcat-events/projects/1)
-[Actions](https://github.com/akhilmallepally/bearcat-events/actions)
+[Proposal](https://github.com/kushalkatari/Proposal5B-BearcatE/blob/main/Proposal.md)</br>
+[Front-End Repo](https://github.com/akhilmallepally/bearcat-events/tree/main/app)</br>
+[Back-End Repo](https://github.com/akhilmallepally/bearcat-events/tree/main/backend)</br>
+[Wiki](https://github.com/akhilmallepally/bearcat-events/wiki)</br>
+[Milestones](https://github.com/akhilmallepally/bearcat-events/milestones)</br>
+[Issues](https://github.com/akhilmallepally/bearcat-events/issues)</br>
+[Project Board](https://github.com/akhilmallepally/bearcat-events/projects/1)</br>
+[Actions](https://github.com/akhilmallepally/bearcat-events/actions)</br>
