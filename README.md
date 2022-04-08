@@ -3,6 +3,9 @@
 # Bearcat Events
 A progressive web application application that display an event conducted by various student organizations in Northwest Missouri State University, randomly every day. The app would let the users to add, update and Delete Events. There are various student organizations in Northwest. Each student organization conducts various events during every semester.
 
+|Akhil Mallepally   |S542403   |
+|---|---|
+| Kushal Katari  |  S541904 |
 ### RFP of ths project
 Link to the RFP proposed by the client can be found [here](https://github.com/pramod096/Bearcat-Events/blob/main/RFP.md).
 
