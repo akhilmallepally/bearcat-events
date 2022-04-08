@@ -38,8 +38,8 @@ Click [here](https://bearcatevents.herokuapp.com/) to find out deployed site
 Here is our [codacy](https://app.codacy.com/gh/akhilmallepally/bearcat-events/dashboard?utm_source=github.com&utm_medium=referral&utm_content=akhilmallepally/bearcat-events&utm_campaign=Badge_Grade) 
 
 # Documentation
-[Swagger](https://bearcateve.herokuapp.com/swagger/)
-[User Guide]{https://akhilmallepally.github.io/bearcat-events-doc/}
+[Swagger](https://bearcateve.herokuapp.com/swagger/)</br>
+[User Guide](https://akhilmallepally.github.io/bearcat-events-doc/)
 
 # Docker image link:   
 Containerized the backend Django Application. Built and shipped the docker image onto Docker Hub with the build tag.   
