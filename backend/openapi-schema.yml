@@ -1,0 +1,168 @@
+openapi: 3.0.2
+info:
+  title: ''
+  version: ''
+paths:
+  /api/bearcatEs/:
+    get:
+      operationId: listEventModels
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/bearcatE'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createEventModel
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/bearcatE'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/bearcatE'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/bearcatE'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/bearcatE'
+          description: ''
+      tags:
+      - api
+  /api/bearcatEs/{id}/:
+    get:
+      operationId: retrieveEventModel
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this event model.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/bearcatE'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateEventModel
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this event model.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/bearcatE'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/bearcatE'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/bearcatE'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/bearcatE'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateEventModel
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this event model.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/bearcatE'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/bearcatE'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/bearcatE'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/bearcatE'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyEventModel
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this event model.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+components:
+  schemas:
+    bearcatE:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        title:
+          type: string
+          description: title of event
+          maxLength: 100
+        description:
+          type: string
+          description: description about event
+        location:
+          type: string
+          description: location of the event
+        event_date:
+          type: string
+          format: date-time
+        image:
+          type: string
+          format: binary
+      required:
+      - title
+      - description
+      - event_date
