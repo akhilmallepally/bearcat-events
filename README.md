@@ -48,6 +48,9 @@ Here is our [codacy](https://app.codacy.com/gh/akhilmallepally/bearcat-events/da
 ```bash
 python3 manage.py test
 ```
+# Test Coverage
+![WhatsApp Image 2022-04-08 at 3 36 07 PM](https://user-images.githubusercontent.com/35985697/162553197-89c01e0f-3b60-4790-b5cb-ee8f4f1aa5e9.jpeg)
+
 
 # Docker image link:   
 Containerized the backend Django Application. Built and shipped the docker image onto Docker Hub with the build tag.   
