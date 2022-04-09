@@ -82,5 +82,5 @@ The below links are use as references in the process of developing the applicati
 [Link to Issues](https://github.com/akhilmallepally/bearcat-events/issues)</br>
 [Link to Project Board](https://github.com/akhilmallepally/bearcat-events/projects/1)</br>
 [Link to Actions](https://github.com/akhilmallepally/bearcat-events/actions)</br>
-[Link to Presentation Slides](https://github.com/akhilmallepally/bearcat-events/blob/main/Presentation.pptx)
+[Link to Presentation Slides](https://github.com/akhilmallepally/bearcat-events/blob/main/Presentation.pptx)</br>
 [Link to Peer Review](https://github.com/akhilmallepally/bearcat-events/blob/main/Peer%20Reviews.docx)
