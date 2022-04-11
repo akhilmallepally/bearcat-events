@@ -14,7 +14,7 @@ Link to the RFP proposed by the client can be found [here](https://github.com/pr
 Progressive web application development [proposal](https://github.com/kushalkatari/Proposal5B-BearcatE/blob/main/Proposal.md)   
 
 ### Hosted site
-Click [here](https://bearcatevents.herokuapp.com/) to find out deployed site
+Click [here](https://bearcat-events.herokuapp.com/) to find out deployed site
 
 ### Proposed stack for the project:   
 * Programming Languages :   
